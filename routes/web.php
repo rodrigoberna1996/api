@@ -17,6 +17,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/test', function () {
+$router->post('/test', function () {
     return 'hello word';
 });
