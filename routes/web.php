@@ -2,6 +2,8 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,6 +19,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->post('/test', function () {
-    return 'hello word';
+$router->get('/test', function (Request $request) {
+    return $request;
 });
